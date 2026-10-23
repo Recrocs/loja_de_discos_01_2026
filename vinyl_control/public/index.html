@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel | Vinyl Control</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="topbar">
+    <a class="brand" href="/index.html"><span class="brand-icon small">♫</span> Vinyl Control</a>
+    <div class="user-area"><span id="nome-usuario">Carregando...</span><button id="btn-sair" class="btn btn-light">Sair</button></div>
+  </header>
+  <main class="container">
+    <section class="welcome">
+      <p class="eyebrow">PAINEL PRINCIPAL</p>
+      <h1>Seu acervo, em harmonia.</h1>
+      <p class="muted">Acompanhe os discos e mantenha o estoque organizado.</p>
+    </section>
+    <section class="stats-grid">
+      <article class="stat-card"><span>Discos cadastrados</span><strong id="total-discos">—</strong><small>títulos no catálogo</small></article>
+      <article class="stat-card"><span>Unidades em estoque</span><strong id="total-unidades">—</strong><small>unidades disponíveis</small></article>
+      <article class="stat-card"><span>Movimentações</span><strong id="total-movimentacoes">—</strong><small>entradas e saídas registradas</small></article>
+      <article class="stat-card"><span>Discos zerados</span><strong id="discos-zerados">—</strong><small>precisam de atenção</small></article>
+    </section>
+    <h2 class="section-title">O que deseja fazer?</h2>
+    <section class="action-grid">
+      <a class="action-card" href="/discos.html"><span class="action-icon">♫</span><div><h3>Cadastro de discos</h3><p>Cadastre, busque, edite e exclua itens do catálogo.</p></div><span class="arrow">→</span></a>
+      <a class="action-card" href="/estoque.html"><span class="action-icon">↕</span><div><h3>Gestão de acervo e vendas</h3><p>Registre reposições e vendas e acompanhe o estoque.</p></div><span class="arrow">→</span></a>
+    </section>
+    <footer>Vinyl Control · Sistema acadêmico para gestão de loja de discos</footer>
+  </main>
+</body>
+</html>

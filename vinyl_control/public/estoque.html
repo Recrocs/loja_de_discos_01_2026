@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de acervo e vendas | Vinyl Control</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body data-page="estoque">
+  <header class="topbar"><a class="brand" href="/index.html"><span class="brand-icon small">♫</span> Vinyl Control</a><div class="user-area"><span id="nome-usuario">Carregando...</span><button id="btn-sair" class="btn btn-light">Sair</button></div></header>
+  <main class="container">
+    <a class="back-link" href="/index.html">← Voltar ao painel</a>
+    <section class="page-heading"><div><p class="eyebrow">OPERAÇÃO</p><h1>Gestão de acervo e vendas</h1><p class="muted">Registre entradas e saídas e acompanhe o estoque por título.</p></div></section>
+    <section class="panel">
+      <h2>Registrar movimentação</h2>
+      <form id="form-movimentacao">
+        <div class="form-grid">
+          <div class="wide-field"><label for="id_disco">Disco *</label><select id="id_disco" required><option value="">Carregando discos...</option></select></div>
+          <div><label for="tipo_movimentacao">Tipo *</label><select id="tipo_movimentacao" required><option value="entrada">Reposição / Compra (entrada)</option><option value="saida">Venda (saída)</option></select></div>
+          <div><label for="quantidade">Quantidade *</label><input id="quantidade" type="number" min="1" step="1" required></div>
+          <div><label for="data_movimentacao">Data da movimentação *</label><input id="data_movimentacao" type="date" required></div>
+          <div><label for="observacao">Observação</label><input id="observacao" maxlength="250" placeholder="Opcional"></div>
+        </div>
+        <p id="mensagem-movimentacao" class="mensagem" role="status"></p>
+        <button class="btn btn-primary" type="submit">Registrar movimentação</button>
+      </form>
+    </section>
+    <section class="panel">
+      <div class="section-row"><h2>Acervo em ordem alfabética</h2><button id="btn-atualizar" class="btn btn-light">Atualizar</button></div>
+      <div class="table-wrap"><table><thead><tr><th>Título</th><th>Artista</th><th>Estoque atual</th><th>Estoque mínimo</th><th>Situação</th></tr></thead><tbody id="lista-estoque"><tr><td colspan="5">Carregando...</td></tr></tbody></table></div>
+    </section>
+    <section class="panel">
+      <h2>Histórico de movimentações</h2>
+      <div class="table-wrap"><table><thead><tr><th>Data</th><th>Disco</th><th>Tipo</th><th>Quantidade</th><th>Usuário</th><th>Observação</th></tr></thead><tbody id="lista-movimentacoes"><tr><td colspan="6">Carregando...</td></tr></tbody></table></div>
+    </section>
+    <footer>Vinyl Control · Movimentações de estoque</footer>
+  </main>
+</body>
+</html>
